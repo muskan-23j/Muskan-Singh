@@ -1,0 +1,10 @@
+text = input("Enter you text: ")
+word = input("Enter the word to be searched:")
+
+def search(text,word):
+    if word in text:
+        print("Worf Found")
+    else:
+        print("Word not found")
+
+print(search(text,word))
