@@ -1,0 +1,19 @@
+import re
+import nltk
+
+def tokenize1(text):
+    tokens = re.split('\Wt',text)
+    print(tokens)
+
+def tokenize2(text):
+    nltk_tokens = nltk.sent_tokenize(text)
+    print(nltk_tokens)
+
+def tokenize3(text):
+    nltk_tokens = nltk.word_tokenize(text)
+    print(nltk_tokens)
+
+text = "There are so many programming languages. Some are python, C, Java. I like Python!"
+tokenize1(text)
+tokenize2(text)
+tokenize3(text)
