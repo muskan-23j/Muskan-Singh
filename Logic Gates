@@ -1,0 +1,87 @@
+A=int(input("Enter a value for Input A (0 or 1) "))
+B=int(input("Enter a value for Input B (0 or 1) "))
+print("Enter the logic gate among (AND, OR, NOT, NAND, OR, XOR, XNOR")
+gate= input("ENTER GATE NAME ")
+gate=gate.upper()
+
+if gate == 'AND':
+    Y= A*B 
+    print("*****")
+    print("TRUTH TABLE OF AND GATE")
+    print("_____________")
+    print("| A | B | Y |")
+    print("|",A,"|",B,"|",Y,"|")
+
+elif gate == 'OR':
+    Y = A + B
+    if A==1 and B==1:
+        Y=A*B
+    print("********")
+    print("TRUTH TABLE OF OR GATE")
+    print("A | B | Y")
+    print( A,"|", B,"|",Y)
+
+elif gate == 'NAND':
+    Y=A*B
+    if Y==1:
+        Y=0
+    else:
+        Y=1
+    print("*****")
+    print("TRUTH TABLE OF NAND GATE")
+    print("A | B | C")
+    print(A,"|",B,"|",Y)
+
+elif gate == 'NOR':
+    Y= A + B
+    if Y==1:
+        Y=0
+    else:
+        Y=1
+    print("******")
+    print("TRUTH TABLE OF NOR GATE")
+    print("A | B | Y")
+    print(A,"|",B,"|",Y)
+
+elif gate == 'NOT':
+    print("As NOT gate includes only one input variable So,")
+    a=int(input("Enter the value for input variable A (0 or 1) "))
+    if a==0:
+        Y=1
+    else:
+        Y=0
+    print("******")
+    print("TRUTH TABLE OF NOT GATE")
+    print("A | Y")
+    print(a,"|",Y)
+
+elif gate == 'XOR':
+    if A==0:
+        a=1     # variable a is complement of A (A')
+    else:
+        a=0
+    if B==0:
+        b=1     # variable b is complement of B (B')
+    else:
+        b=0
+    Y = (A*b)+(B*a) # Y=(A*B')+(A'*B)
+    print("******")
+    print("TRUTH TABLE OF XOR GATE")
+    print("A | B | Y")
+    print(A,"|",B,"|",Y)
+
+elif gate == 'XNOR':
+    if A==0:
+        a=1     # variable a is complement of A (A')
+    else:
+        a=0
+    if B==0:
+        b=1     # variable b is complement of B (B')
+    else:
+        b=0
+    Y = (A*B)+(b*a)
+    print("******")
+    print("TRUTH TABLE OF XNOR GATE")
+    print("A | B | Y")
+    print(A,"|",B,"|",Y)
+            
